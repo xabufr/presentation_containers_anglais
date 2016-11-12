@@ -1,0 +1,184 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <title>reveal.js</title>
+
+        <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/theme/black.css">
+
+        <!-- Theme used for syntax highlighting of code -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section>
+                <h1>Containers</h1>
+                <h2>what they are and why you should care about</h2>
+                </section>
+
+                <!-- Part 1 -->
+                <section>
+
+                <section>
+                <h1>A little reflexion</h1>
+                </section>
+
+                <section>
+                <h2>How can you...</h2>
+                <ul>
+                    <li>Package an application ?</li>
+                    <li>With correct dependencies ?</li>
+                    <li>Have multiple application on the same host ?</li>
+                    <li>Have dev/test/prod environment with the closest behavior possible ?</li>
+                </ul>
+                </section>
+
+                <section>
+                <h2>That doesn't seems to be so easy, right ?</h2>
+                </section>
+
+                <section>
+                <h2>One minute, virtualization can't help us ?</h2>
+                </section>
+
+                <section>
+                <h2>Wait, isn't this too much for this simple task ?</h2>
+                <p class="fragment">Can't we find a more simple way to do this ?</p>
+                </section>
+
+                </section>
+                <!-- End part 1 -->
+                <!-- Part 2 -->
+                <section>
+
+                <section>
+                <h1>Containers</h1>
+                A quick technical tour
+                </section>
+
+                <section>
+                <h2>Containers are like virtual machines...</h2>
+                <ul>
+                    <li>They allow processes to be isolated from each other, in term of</li>
+                    <ul>
+                        <li>Storage</li>
+                        <li>Network</li>
+                        <li>System access</li>
+                        <li>Resources usage</li>
+                        <li>Dependencies</li>
+                    </ul>
+                </ul>
+                </section>
+
+                <section>
+                <h2>...but on steroïds...</h2>
+                <img src="./assets/container_vs_vm.jpg" alt="">
+                </section>
+
+                <section>
+                <h2>...and this really powerfull</h2>
+                <ul>
+                    <li>Very little performance overhead</li>
+                    <li>Lightweight images</li>
+                    <li>Easy to build</li>
+                </ul>
+                </section>
+
+                <section>
+                <p>It seems main problems we had with virtualization have gone !</p>
+                <p class="fragment fade-in">Cool !</p>
+                <p class="fragment fade-up">But...</p>
+                </section>
+
+                </section>
+                <!-- End part 2 -->
+                <!-- Part 3 -->
+                <section>
+
+                <section>
+                <h1>Containers can do better...</h1>
+                <p class="fragment">Much better !</p>
+                </section>
+
+                <section>They are, unlike VMs images, immutable</section>
+
+                <section>They fill the gap between Developers and Operators</section>
+
+                <section>
+                <p>You can easily share then with people.</p>
+                <p class="fragment">For instance by using docker and <a href="https://hub.docker.com">hub.docker.com</a></p>
+                </section>
+
+                <section>
+                <p>And they are actually used by many big companies</p>
+                <p class="fragment">Google use them since a decade, with a container orchestration system called Borg.</p>
+                <p class="fragment">Wait, a container orchestration system ? What is this ?</p>
+                </section>
+
+                </section>
+                <!-- End part 3 -->
+
+                <!-- Part 4 -->
+                <section>
+
+                <section><h1>Container orchestration system</h1></section>
+
+                <section>If I tell you that you don't have to care about servers ?</section>
+
+                <section>If I tell you that you can automate all your deployment process, with zero downtime for users, with only few lines of configuration files ?</section>
+
+                <section>
+                <p>Look at technologies like</p>
+                <ul>
+                    <li>Kubernetes</li>
+                    <li>Docker</li>
+                    <li>RKT</li>
+                    <li>Coreos</li>
+                    <li>Rancher</li>
+                    <li>AWS ECS</li>
+                    <li>Docker Swarm</li>
+                    <li>Fabric8</li>
+                    <li>Openshift</li>
+                    <li>Mesos</li>
+                    <li>DCOS</li>
+                </ul>
+                </section>
+
+
+                </section>
+                <!-- End part 4 -->
+            </div>
+        </div>
+
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.js"></script>
+
+        <script>
+            // More info https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                history: true,
+
+                // More info https://github.com/hakimel/reveal.js#dependencies
+                dependencies: [
+                { src: 'plugin/markdown/marked.js' },
+                { src: 'plugin/markdown/markdown.js' },
+                { src: 'plugin/notes/notes.js', async: true },
+                { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+                ]
+            });
+        </script>
+    </body>
+</html>
